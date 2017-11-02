@@ -190,17 +190,19 @@ int _5searchList() {
         beforeTemp = head;
         temp = head->link;
         puts("Please enter the name of the product:");
-        char* target = "";
+        char* target = (char*)malloc(10*sizeof(char));
         scanf("%s", target);
         while(temp!=NULL){
             if (strcmp(temp->name, target) == 0) {
                 puts("Item found");
+                free(target);
                 return 1; // true
             }
             beforeTemp = temp;
             temp=temp->link;
         }
         puts("Item not found");
+        free(target);
         return 0; // false
     }
 };
