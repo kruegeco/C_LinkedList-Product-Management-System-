@@ -149,6 +149,8 @@ void _2insertItem () {
                      "\tformat: name unit price quantity; str str int int ");
         node* first = (node*)malloc(sizeof(node)); // Create first and insert at head
         first->link = head->link;
+        first->name = (char*)malloc(10*sizeof(char));
+        first->unit = (char*)malloc(10*sizeof(char));
         head = first;
         scanf("%s %s %d %d", first->name, first->unit, &first->price, &first->quantity);
         while (first->price <= 0 || first->quantity <= 0) {
@@ -167,6 +169,8 @@ int _3deleteItem () {
     }
     else if (_5searchList()==1) {
         beforeTemp->link = temp->link->link; // FIXME Does this change the data of the pointer?
+        free(temp->name);
+        free(temp->unit);
         free(temp);
         puts("Item deleted");
         return 1;
@@ -178,6 +182,8 @@ int _3deleteItem () {
 void _4deleteList(node* tHead) {
     if (tHead != NULL) {
         _4deleteList(tHead->link);
+        free(temp->name);
+        free(temp->unit);
         free(tHead);
     }
 };
