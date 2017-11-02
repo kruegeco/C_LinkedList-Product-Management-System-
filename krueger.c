@@ -220,8 +220,8 @@ void _6displayList () {
     } else {
         temp = head->link;
 
+        puts("-Product Information-");
         while(temp!=NULL){
-            puts("-Product Information-");
             printf("Name: %s", temp->name);
             printf("Unit: %s", temp->unit);
             printf("Price: %d", temp->price);
