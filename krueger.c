@@ -3,7 +3,7 @@
 /***********************************************************************
 * PROJECT 2-1; Product Management System (Linked List)
 * CIS 241 MWF 1000-1050, Fall 2017
-* Professor Cao Xiang
+* Professor Cao, Xiang
 * Partners: NONE
 * @author Krueger, Cody;
 * @version v1.0 01NOV2017 23:30
