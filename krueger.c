@@ -151,7 +151,7 @@ void _2insertItem () {
         first->link = head->link;
         first->name = (char*)malloc(10*sizeof(char));
         first->unit = (char*)malloc(10*sizeof(char));
-        head = first;
+        head->link = first;
         scanf("%s %s %d %d", first->name, first->unit, &first->price, &first->quantity);
         while (first->price <= 0 || first->quantity <= 0) {
             puts("ERROR! Price and quantity must be greater than 0, please re-enter price and quantity!");
