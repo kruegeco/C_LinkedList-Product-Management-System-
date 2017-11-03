@@ -1,0 +1,8 @@
+LL: krueger.o
+	gcc -o LL krueger.o
+
+krueger.o: krueger.c
+	gcc -c krueger.c
+
+clean:
+	rm -f *.o LL
