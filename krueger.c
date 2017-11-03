@@ -28,8 +28,8 @@
 // new functions
 typedef struct product {
     struct product* link;
-    const char* name;
-    const char* unit;
+    char* name;
+    char* unit;
     int price;
     int quantity;
 } node;
